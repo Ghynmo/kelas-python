@@ -13,18 +13,18 @@ def SelisihMaksimum(numbers):
     # Contoh: numbers = 2,3,10,6,4,8,1
 
     # Loop pertama untuk angka yang lebih kecil
-    for i in range(len(numbers)):
-        # 7x
-        # 2,3,10,6,4,8,1
+    for i in range(len(listAngka)): # i dari (total panjang listAngka) = 7x loop
+        print("perulangan ke ", i)
+        # i0 = 2,  i1 = 3,  i2 = 10,  i3 = 6,  i4 = 4, i5 = 8,  i6 = 1
 
-        # Loop kedua untuk mencari angka yang lebih besar setelahnya
-        for j in range(i + 1, len(numbers)):
-            # i1 = 3,10,6,4,8,1
-            # i2 = 10,6,4,8,1
-            # i3 = 6,4,8,1
-            # i4 = 4,8,1
-            # i5 = 8,1
-            # i6 = 1
+        for j in range(i+1, len(listAngka)):
+            # i0 = 3,10,6,4,8,1
+            # i1 = 10,6,4,8,1
+            # i2 = 6,4,8,1
+            # i3 = 4,8,1
+            # i4 = 8,1
+            # i5 = 1
+            # i6 = 
 
             # Hanya hitung selisih jika angka kedua lebih besar
             if numbers[j] > numbers[i]:
@@ -39,10 +39,6 @@ def SelisihMaksimum(numbers):
     
     # Tampilkan hasil
     print(f"Selisih maksimum: {selisih_terbesar} (dari {angka_besar} - {angka_kecil})")
-
-# Program utama
-print("Program Mencari Selisih Maksimum")
-print("--------------------------------")
 
 # Minta input dari pengguna
 input_string = input("Masukkan angka (pisahkan dengan koma). Contoh: 2,3,10,6,4,8,1\n")

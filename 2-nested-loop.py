@@ -14,7 +14,7 @@ for i in range(len(listAngka)): # i dari (total panjang listAngka) = 7x loop
 
 
 print("=======LV2======")
-# Perulangan bersarang (nested-Loop) Level1
+# Perulangan bersarang (nested-Loop) Level2
 for i in range(4, len(listAngka)-1): # i dari (total panjang listAngka) = 7x loop
     # 4,8
     print("perulangan ke ", i)
@@ -26,7 +26,7 @@ for i in range(4, len(listAngka)-1): # i dari (total panjang listAngka) = 7x loo
 
 
 print("=======LV3======")
-# Perulangan bersarang (nested-Loop) Level1
+# Perulangan bersarang (nested-Loop) Level3
 for i in range(len(listAngka)): # i dari (total panjang listAngka) = 7x loop
     print("perulangan ke ", i)
     # i = 0-6
