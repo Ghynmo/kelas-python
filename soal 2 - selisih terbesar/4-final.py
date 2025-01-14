@@ -1,3 +1,5 @@
+from array import array
+
 def SelisihMaksimum(numbers):
     # Pastikan list memiliki minimal 2 angka
     if len(numbers) < 2:
@@ -13,11 +15,10 @@ def SelisihMaksimum(numbers):
     # Contoh: numbers = 2,3,10,6,4,8,1
 
     # Loop pertama untuk angka yang lebih kecil
-    for i in range(len(listAngka)): # i dari (total panjang listAngka) = 7x loop
-        print("perulangan ke ", i)
+    for i in range(len(numbers)): # i dari (total panjang numbers) = 7x loop
         # i0 = 2,  i1 = 3,  i2 = 10,  i3 = 6,  i4 = 4, i5 = 8,  i6 = 1
 
-        for j in range(i+1, len(listAngka)):
+        for j in range(i+1, len(numbers)):
             # i0 = 3,10,6,4,8,1
             # i1 = 10,6,4,8,1
             # i2 = 6,4,8,1
@@ -41,10 +42,15 @@ def SelisihMaksimum(numbers):
     print(f"Selisih maksimum: {selisih_terbesar} (dari {angka_besar} - {angka_kecil})")
 
 # Minta input dari pengguna
-input_string = input("Masukkan angka (pisahkan dengan koma). Contoh: 2,3,10,6,4,8,1\n")
+input_angka = input("Masukkan angka (pisahkan dengan koma). Contoh: [2,3,10,6,4,8,1]\n")
 
-# Ubah input string menjadi list angka
-numbers = [int(x) for x in input_string.split(',')]
+# Ubah string input menjadi list
+list_angka = eval(input_angka)
+# list [2,3,10,6,4,8,1]
+
+# Ubah list menjadi array
+array_angka = array('i', list_angka)
+# array [2,3,10,6,4,8,1]
 
 # Panggil fungsi untuk mencari selisih maksimum
-SelisihMaksimum(numbers)
+SelisihMaksimum(array_angka)

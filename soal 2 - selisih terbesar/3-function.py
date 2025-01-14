@@ -5,7 +5,11 @@ def SelisihMaksimum(listAngka):
     angka_kecil = 0
     angka_besar = 0
     
-    # Contoh: listAngka = 2,3,10,6,4,8,1
+    # Contoh: listAngka = [2,3,10,6,4,8,1]
+    [2,3,10,6,4,8,1]
+    [2,3,10,6,4,8,1]
+    10 paling besar setlah angka paling kecil
+
 
     # Loop pertama untuk angka yang lebih kecil
     for i in range(len(listAngka)): # i dari (total panjang listAngka) = 7x loop
@@ -21,19 +25,18 @@ def SelisihMaksimum(listAngka):
             # i5 = 1
             # i6 = 
 
-            print("  i = ", listAngka[i], " j = ", listAngka[j])
+            if numbers[j] > numbers[i]:
+                # Hitung selisih antara dua angka
+                selisih = listAngka[j] - listAngka[i]
+                # selisih = abs(selisih)
 
-            # Hitung selisih antara dua angka
-            selisih = listAngka[j] - listAngka[i]
-            selisih = abs(selisih)
-
-            print("             selisih = ", selisih)
-            
-            # Jika selisih yang baru lebih besar, simpan
-            if selisih > selisih_terbesar:
-                selisih_terbesar = selisih
-                angka_kecil = listAngka[i]
-                angka_besar = listAngka[j]
+                print("             selisih = ", selisih)
+                
+                # Jika selisih yang baru lebih besar, simpan
+                if selisih > selisih_terbesar:
+                    selisih_terbesar = selisih
+                    angka_i = listAngka[i]
+                    angka_j = listAngka[j]
     
     # Tampilkan hasil
     print(f"Selisih maksimum: {selisih_terbesar} (dari {angka_besar} - {angka_kecil})")
